@@ -11,14 +11,8 @@
       <li ng-repeat="item in beat.reporters = (beat.reporters | filter:query)">
           <a ng-click="showme=true">{{item.name}}</a>
           <div>
-            <h2 ng-show="showme">{{item.name}},{{item.yearsEmployed}},{{item.birthday}}</h2>
+            <h3 ng-show="showme">{{item.name}},{{item.yearsEmployed}},{{item.birthday}}</h3>
           </div>
-        <span class="form-group" ng-show="editing" ng-submit="editing = false">
-          <form class="form-inline" role="form">
-            <input type="text" class="form-control input-sm" ng-model="item.name" placeholder="Name" required>
-            <button type="submit" class="btn btn-success btn-sm">Save</button>
-          </form>
-        </span>
       </li>
     </ul>
   </div>

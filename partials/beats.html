@@ -12,11 +12,19 @@
 </div>
 <div class="col-md-5 col-xs-5" ng-show="beats.length">
   <h2>Here Are the Beats in the Tumalo Times:</h2>
-   <ul>
-    <li ng-repeat="item in beats">
-      <a ui-sref="beats.reporters({beatId: item.id})">{{item.title}}</a>
-    </li> 
-   </ul>
+  <h4>Search Beats</h4>
+    <form class="form-inline" role="form">
+      <div class="form-group">
+        <input type="text" ng-model="query" class="form-control" placeholder="Search">
+      </div>
+    </form>
+    <h2 ng-show="beats.length && filtered.length">Beat List</h2>
+    <ul>
+      <li ng-repeat="item in beats = (beats | filter:query)">
+          <a ui-sref="beats.reporters({beatId: item.id})">{{item.title}}</a>
+      </li>
+    </ul>
+  </div>
 </div>
 
 <div ui-view></div>
