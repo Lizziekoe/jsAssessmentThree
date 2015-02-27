@@ -10,7 +10,7 @@
     <br>
     <h2 ng-show="beat.reporters.length && filtered.length">Reporter List</h2>
     <ul>
-      <li ng-repeat="item in beat.reporters = (beat.reporters | filter:query)">
+      <li ng-repeat="item in beat.reporters | filter:query">
           <a ng-click="showme=true">{{item.name}}</a>
           <div>
             <h3 ng-show="showme">Employee: {{item.name}} <br> Years Employed: {{item.yearsEmployed}} <br> DOB: {{item.birthday}}</h3>
@@ -23,9 +23,9 @@
     <h2>Add A Reporter To {{ beat.title }}</h2>
     <form ng-submit="addReporter()" class="form-inline" role="form">
       <div class="form-group">
-        <input type="text" ng-model="reporterName" class="form-control" placeholder=" Reporters Name">
-        <input type="text" ng-model="reporterYears" class="form-control" placeholder="Years Employed">
-        <input type="text" ng-model="reporterBirthday" class="form-control" placeholder=" Reporters Birthday">
+        <input type="text" ng-model="reporterName" class="form-control" placeholder=" Reporters Name" required>
+        <input type="text" ng-model="reporterYears" class="form-control" placeholder="Years Employed" required>
+        <input type="text" ng-model="reporterBirthday" class="form-control" placeholder=" Reporters Birthday" require>
       </div>
       <button type="submit" class="btn btn-warning">Add</button>
     </form>
