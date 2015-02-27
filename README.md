@@ -5,7 +5,9 @@ A simple angular javascript app that allows a user to add beats and reporters, t
 
 Installation and Usage
 ------------
-To run the app click here: http://lizziekoe.github.io/jsAssessmentThree/
+To run the app clone this repository, run 
+$python -m SimpleHTTPServer 
+from the directory, then open up localhost:8000 in your browser.
 
 Motivation
 --------
@@ -15,7 +17,7 @@ Motivation
 Author
 ------
 
-Lizzie Koehler
+Lizzie Koehler 
 
 License
 -------
