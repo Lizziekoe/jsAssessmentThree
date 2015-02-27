@@ -3,5 +3,7 @@ newspaperTracker.controller('ReportersCtrl', function ReportersCtrl($scope, $sta
   $scope.addReporter = function() {
     $scope.beat.reporters.push({name: $scope.reporterName, yearsEmployed: $scope.reporterYears, birthday: $scope.reporterBirthday});
     $scope.reporterName = null;
+    $scope.reporterYears = null;
+    $scope.reporterBirthday = null;
   }
 });
