@@ -1,0 +1,5 @@
+BeatsFactory = function(){
+	addBeat = function(){
+		
+	}
+}
